@@ -60,19 +60,14 @@ router.post(
 
       jwt.sign(
         payload, 
-        config.get('jwtToken'),
+        config.get('jwtSecret'),
         {expiresIn:360000},
         (err, token) => {
           if(err) throw err;
           res.json({token});
-
-          
         }
-        )
+        );
 
-      //Return jsonwebtoken
-
-      res.send("User registered");
     } catch (err) {
       console.error(err.message);
       res.status(500).send("server.error");
