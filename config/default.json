@@ -1,3 +1,4 @@
 {
-    "mongoURI":"mongodb+srv://Constantin123:Constantin123@devsocial.soowp.mongodb.net/MERN?retryWrites=true&w=majority"
+    "mongoURI":"mongodb+srv://Constantin123:Constantin123@devsocial.soowp.mongodb.net/MERN?retryWrites=true&w=majority",
+    "jwtSecret":"mysecrettoken"
 }
