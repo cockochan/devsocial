@@ -6,13 +6,13 @@
 1 verbose cli   'dev'
 1 verbose cli ]
 2 info using npm@4.0.0
-3 info using node@v14.0.0
+3 info using node@v12.6.0
 4 verbose run-script [ 'predev', 'dev', 'postdev' ]
 5 info lifecycle devsocial@1.0.0~predev: devsocial@1.0.0
 6 silly lifecycle devsocial@1.0.0~predev: no script for predev, continuing
 7 info lifecycle devsocial@1.0.0~dev: devsocial@1.0.0
 8 verbose lifecycle devsocial@1.0.0~dev: unsafe-perm in lifecycle true
-9 verbose lifecycle devsocial@1.0.0~dev: PATH: C:\Users\User\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;D:\gitHub\devsocial\node_modules\.bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Yarn\bin\;C:\blp\DAPI;C:\blp\DAPI\DDE;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Box\Box Edit\;C:\Users\User\AppData\Local\GitHubDesktop\bin;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Users\User\AppData\Local\Yarn\bin;C:\Program Files\Docker Toolbox
+9 verbose lifecycle devsocial@1.0.0~dev: PATH: C:\Users\User\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;D:\gitHub\devsocial\node_modules\.bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Yarn\bin\;%NVM_HOME%;%NVM_SYMLINK%;C:\blp\DAPI;C:\blp\DAPI\DDE;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Box\Box Edit\;C:\Users\User\AppData\Local\GitHubDesktop\bin;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Users\User\AppData\Local\Yarn\bin;C:\Program Files\Docker Toolbox;C:\Users\User\AppData\Roaming\nvm;C:\Program Files\nodejs
 10 verbose lifecycle devsocial@1.0.0~dev: CWD: D:\gitHub\devsocial
 11 silly lifecycle devsocial@1.0.0~dev: Args: [ '/d /s /c', 'concurrently "npm run server" "npm run client"' ]
 12 silly lifecycle devsocial@1.0.0~dev: Returned: code: 3221225786  signal: null
@@ -20,16 +20,16 @@
 14 verbose stack Error: devsocial@1.0.0 dev: `concurrently "npm run server" "npm run client"`
 14 verbose stack Exit status 3221225786
 14 verbose stack     at EventEmitter.<anonymous> (C:\Users\User\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:277:16)
-14 verbose stack     at EventEmitter.emit (events.js:315:20)
+14 verbose stack     at EventEmitter.emit (events.js:203:13)
 14 verbose stack     at ChildProcess.<anonymous> (C:\Users\User\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:40:14)
-14 verbose stack     at ChildProcess.emit (events.js:315:20)
-14 verbose stack     at maybeClose (internal/child_process.js:1051:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:287:5)
+14 verbose stack     at ChildProcess.emit (events.js:203:13)
+14 verbose stack     at maybeClose (internal/child_process.js:1021:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)
 15 verbose pkgid devsocial@1.0.0
 16 verbose cwd D:\gitHub\devsocial
 17 error Windows_NT 10.0.14393
 18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "run" "dev"
-19 error node v14.0.0
+19 error node v12.6.0
 20 error npm  v4.0.0
 21 error code ELIFECYCLE
 22 error devsocial@1.0.0 dev: `concurrently "npm run server" "npm run client"`
