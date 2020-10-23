@@ -69,7 +69,7 @@ register({name, email, password})
         <input type="submit" className="btn btn-primary" value="Register" />
       </form>
       <p className="my-1">
-        Already have an account? <Link to="login.html">Sign In</Link>
+        Already have an account? <Link to="/login">Sign In</Link>
       </p>
         </Fragment>
     );
