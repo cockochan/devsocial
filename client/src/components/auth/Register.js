@@ -82,6 +82,5 @@ Register.propTypes = {
 }
 export default connect(null,{setAlert, register})(Register)
 
-function newFunction(register, name, email, password) {
-  register({ name, email, password })
-}
+
+  
