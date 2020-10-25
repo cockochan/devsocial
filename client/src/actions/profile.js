@@ -5,6 +5,7 @@ export const getCurrentProfile =()=>async dispatch=>{
 
   
       try {
+        axios.defaults.headers.common['x-auth-token'] = localStorage.token;
         const res = await axios.get('/api/profile/me')
         dispatch({
             type:GET_PROFILE,

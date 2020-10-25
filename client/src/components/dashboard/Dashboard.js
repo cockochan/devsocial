@@ -4,10 +4,15 @@ import {Link}from 'react-router-dom'
 import PropTypes from 'prop-types'
 import{ getCurrentProfile} from '../../actions/profile'
 import Spinner from'../../layout/Spinner'
-const Dashboard = ({getCurrentProfile, auth:{user}, profile:{profile,loading}})=> {
-    useEffect(()=>{
-        getCurrentProfile();
-    },[])
+const Dashboard = ({
+  getCurrentProfile,
+  auth: { user },
+  profile: { profile, loading }
+}) => {
+    useEffect(() => {
+        if(localStorage.token) {
+        getCurrentProfile()}
+      }, [getCurrentProfile]);
 
     return loading && profile===null?<Spinner/>:<Fragment>
     <h1 className="large text-primary">Dashboard</h1>
@@ -29,4 +34,6 @@ const mapStateToProps =state =>({
 })
 
 
-export default connect (mapStateToProps,{getCurrentProfile})(Dashboard)
+export default connect(mapStateToProps, { getCurrentProfile})(
+    Dashboard
+  );
