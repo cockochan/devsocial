@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 const Navbar=({auth:{isAuthenticated, loading }, logout}) =>{
 const authLinks =(
   <ul>
+    <li><Link to="/dashboard"><span className="hide-sm"><i className = "fas fa-user"></i> Dashboard</span> </Link></li>
     <li>
       <a onClick={logout} href='#!'>
         <i className = "fas fa-sign-out-alt"></i>
