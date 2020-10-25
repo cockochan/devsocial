@@ -21,7 +21,6 @@ import {login} from '../../actions/auth'
     login({ email, password})
     }
     if(isAuthenticated){
-      console.log('hoolahoop')
       return <Redirect to="/dashboard"/>
     }
         return (

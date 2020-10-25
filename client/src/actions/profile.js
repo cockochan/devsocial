@@ -2,7 +2,9 @@ import axios from 'axios';
 import { setAlert } from './alert';
 import { GET_PROFILE, PROFILE_ERROR } from './types';
 export const getCurrentProfile =()=>async dispatch=>{
-    try {
+
+  
+      try {
         const res = await axios.get('/api/profile/me')
         dispatch({
             type:GET_PROFILE,
@@ -13,6 +15,5 @@ export const getCurrentProfile =()=>async dispatch=>{
             type:PROFILE_ERROR,
             payload:{msg:err.response.statusText, status:err.response.status}
         })
-    }
+    }}
 
-}
