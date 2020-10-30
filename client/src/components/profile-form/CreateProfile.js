@@ -1,8 +1,8 @@
 import React,{Fragment, useState} from 'react'
 import PropTypes from 'prop-types'
 import {conect} from 'react-redux'
-
-const CreateProfile = props => {
+imposrt {createProfile}from 
+const CreateProfile = ({createProfile}) => {
     const [formData, setFormData]=useState({
         company:'',
         website:'',
@@ -138,7 +138,9 @@ const CreateProfile = props => {
 }
 
 CreateProfile.propTypes = {
+  createProfile: PropTypes.func.isRequired,
 
 }
 
-export default CreateProfile
+export default connect(null,{createProfile}) (createProfile);
+    
