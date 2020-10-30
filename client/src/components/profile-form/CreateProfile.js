@@ -1,7 +1,7 @@
 import React,{Fragment, useState} from 'react'
 import PropTypes from 'prop-types'
-import {conect} from 'react-redux'
-imposrt {createProfile}from 
+import {connect} from 'react-redux'
+import {createProfile}from '../../actions/profile'
 const CreateProfile = ({createProfile}) => {
     const [formData, setFormData]=useState({
         company:'',
