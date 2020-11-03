@@ -91,7 +91,7 @@ export const getCurrentProfile =()=>async dispatch=>{
                 }
             }
             const res = await axios.put('/api/profile/education',formData, config)
-            console.log(res.data)
+         
             dispatch({
                 type:UPDATE_PROFILE,
                 payload: res.data
@@ -131,15 +131,15 @@ export const getCurrentProfile =()=>async dispatch=>{
             })
         }
     }
-    //Delete experience
+    //Delete education
     export const deleteEducation = id => async dispatch =>{
         try{
-            const res = await axios.delete(`/api/profile/experience/${id}`);
+            const res = await axios.delete(`/api/profile/education/${id}`);
             dispatch({
                 type:UPDATE_PROFILE,
                 payload: res.data
             })
-            dispatchEvent(setAlert('Education Removed', 'success'))
+            dispatch(setAlert('Education Removed', 'success'))
         }catch(err){
             dispatch({
                 type:PROFILE_ERROR,
