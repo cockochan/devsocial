@@ -15,7 +15,7 @@ const Dashboard = ({
     useEffect(() => {
         if(localStorage.token) {
         getCurrentProfile()}
-      }, [getCurrentProfile]);
+      }, []);
 
     return loading && profile===null?<Spinner/>:<Fragment>
     <h1 className="large text-primary">Dashboard</h1>

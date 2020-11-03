@@ -71,7 +71,7 @@ const onChange =e => setFormData({ ...formData, [e.target.name]:e.target.value})
             value={description} onChange={e=>onChange(e)} ></textarea>
         </div>
         <input type="submit" className="btn btn-primary my-1" />
-        <a className="btn btn-light my-1" to="/dashboard">Go Back</a>
+        <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
       </form>
     </section>
         </Fragment>
