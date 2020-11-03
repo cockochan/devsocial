@@ -55,7 +55,7 @@ const onChange =e => setFormData({ ...formData, [e.target.name]:e.target.value})
           <p><input type="checkbox" name="current"  checked={current}value={current} onChange={e=>{
           setFormData({...formData, current:!current});
           toggleDisabled(!toDateDisabled);
-          }} /> {''}Current Education</p>
+          }} /> {''}Current school</p>
         </div>
         <div className="form-group">
           <h4>To Date</h4>
