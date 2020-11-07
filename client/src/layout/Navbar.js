@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 const Navbar=({auth:{isAuthenticated, loading }, logout}) =>{
 const authLinks =(
   <ul>
+    <li><Link to="/profiles"> Developers </Link></li>
     <li><Link to="/dashboard"><span className="hide-sm"><i className = "fas fa-user"></i> Dashboard</span> </Link></li>
     <li>
       <a onClick={logout} href='#!'>
@@ -18,7 +19,7 @@ const authLinks =(
 );
 const guestLinks =(
   <ul>
-          <li><Link to="!#">Developers</Link></li>
+         <li><Link to="/profiles"> Developers </Link></li>
           <li><Link to="/register">Register</Link></li>
           <li><Link to="/login">Login</Link></li>
         </ul>
@@ -29,7 +30,7 @@ const guestLinks =(
         <h1>
           <Link to="/"><i className="fas fa-code"></i> DevConnector</Link>
         </h1>
-    {!loading&&(<Fragment>{isAuthenticated? authLinks:guestLinks}</Fragment>)}
+        {<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>}
       </nav>
     )
 }
