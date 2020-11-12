@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import propTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 
 const ProfileItem = ({ profile: {
-    user: { _id, name, avatart },
+    user: { _id, name, avatar },
     status,
     company,
     location,
@@ -11,7 +11,7 @@ const ProfileItem = ({ profile: {
 } }) => {
     return (
         <div className="profile bg-light">
-            <img src={avatart} alt="" className="round-img" />
+            <img src={avatar} alt="" className="round-img" />
             <div>
                 <h2>{name}</h2>
                 <p>{status}{company && <span>at {company}</span>}</p>
