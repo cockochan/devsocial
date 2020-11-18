@@ -26,7 +26,7 @@ const Dashboard = ({
       <Experience experience={profile.experience}/>
       <Education education={profile.education}/>
       <div className='my-to'>
-        <button className='btn btn-danger' onClick={()=>deleteAccount()}><i className="fas fa-user-minus"></i>Delete my Account</button>
+    <button className='btn btn-danger' onClick={()=>deleteAccount()}><i className="fas fa-user-minus"></i>{' '}Delete my Account</button>
       </div>
     </Fragment>:<Fragment><p>You have not setup a profile, please add some info</p>
     <Link to="create-profile" className="btn btn-primary my-1">Create profile</Link>
