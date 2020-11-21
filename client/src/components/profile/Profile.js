@@ -33,9 +33,8 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
        {profile.education.length>0?(<Fragment>
           { profile.education.map(education=>(<ProfileEducation  key={education._id} education={education}/>))}
        </Fragment>):(<h4>No education credentials</h4>)}
-       {profile.githubusername&&<ProfileGithub username={profile.githubusername}/>}
    </div>
-
+   {profile.githubusername&&<ProfileGithub username={profile.githubusername}/>}
 </div></Fragment>)}
          
         </Fragment>
