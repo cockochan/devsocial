@@ -3,23 +3,24 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import Spinner from '../../layout/Spinner'
 import PostItem from './PostItem'
+import PostForm from './PostForm'
 import {getPosts} from '../../actions/post'
-const Posts = ({ getPosts, post:{ posts, loading }}) => {
-
-    useEffect(()=>{
-        getPosts()
-    },[getPosts])
-
+const Posts = ({ getPosts, post: { posts, loading } }) => {
+    useEffect(() => {
+        console.log('hipost')
+      getPosts();
+    }, [getPosts]);
 
     return loading?<Spinner/>:<Fragment>
-        <h1 classname='large text-primary'>Posts</h1>
+        <h1 className='large text-primary'>Posts</h1>
         <p className='lead'>
             <i className='fas fa-user'></i>Welcome to the community
         </p>
-        {/* PostForm */}
+       <PostForm />
         <div className='posts'>
-            {posts.map(post=>(
-                <PostItem key={post.id} post={post}/>
+            {posts.length>0&&posts.map((post)=>(
+              
+                <PostItem key={post._id} post={post}/>
             ))}
         </div>
     </Fragment>
