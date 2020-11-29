@@ -4,7 +4,7 @@ import Spinner from '../../layout/Spinner'
 import {getPost} from '../../actions/post'
 import PropTypes from 'prop-types'
 import PostItem from "../posts/PostItem"
-
+import CommentForm from "../post/CommentForm"
 const Post = ({getPost,post:{post, loading}, match}) => {
     useEffect(()=>{
         getPost(match.params.id);
@@ -12,6 +12,7 @@ const Post = ({getPost,post:{post, loading}, match}) => {
 
     return loading || post === null?<Spinner/>:<Fragment>
         <PostItem post={post}showActions={false}></PostItem>
+        <CommentForm postId={post._id}/>
     </Fragment>
 }
 
