@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import Spinner from '../../layout/Spinner'
 import {getPost} from '../../actions/post'
 import PropTypes from 'prop-types'
-import PostItem from "../posts/PostForm"
+import PostItem from "../posts/PostItem"
 
 const Post = ({getPost,post:{post, loading}, match}) => {
     useEffect(()=>{

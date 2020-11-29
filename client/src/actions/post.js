@@ -104,7 +104,7 @@ const config = {
 // Get post
 export const getPost = id => async dispatch => {
     try {
-      const res = await axios.get(`/posts/${id}`);
+      const res = await axios.get(`/api/posts/${id}`);
   
       dispatch({
         type: GET_POST,
