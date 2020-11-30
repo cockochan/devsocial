@@ -5,10 +5,12 @@ import Spinner from '../../layout/Spinner'
 import PostItem from './PostItem'
 import PostForm from './PostForm'
 import {getPosts} from '../../actions/post'
-const Posts = ({ getPosts, post: { posts, loading } }) => {
+import {loadUser} from '../../actions/auth'
+const Posts = ({ getPosts, post: { posts, loading }, loadUser }) => {
     useEffect(() => {
         console.log('hipost')
       getPosts();
+      loadUser();
     }, [getPosts]);
 
     return loading?<Spinner/>:<Fragment>
@@ -19,7 +21,6 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
        <PostForm />
         <div className='posts'>
             {posts.length>0&&posts.map((post)=>(
-              
                 <PostItem key={post._id} post={post}/>
             ))}
         </div>
@@ -35,4 +36,4 @@ const mapStateToProps =state =>({
     post:state.post
 })
 
-export default connect(mapStateToProps, {getPosts})(Posts)
+export default connect(mapStateToProps, {getPosts,loadUser})(Posts)

@@ -3,8 +3,9 @@ import {connect} from 'react-redux'
 import Spinner from '../../layout/Spinner'
 import {getPost} from '../../actions/post'
 import PropTypes from 'prop-types'
-import PostItem from "../posts/PostForm"
-
+import PostItem from "../posts/PostItem"
+import CommentItem from "../post/CommentItem.js"
+import CommentForm from "../post/CommentForm"
 const Post = ({getPost,post:{post, loading}, match}) => {
     useEffect(()=>{
         getPost(match.params.id);
@@ -12,6 +13,12 @@ const Post = ({getPost,post:{post, loading}, match}) => {
 
     return loading || post === null?<Spinner/>:<Fragment>
         <PostItem post={post}showActions={false}></PostItem>
+        <CommentForm postId={post._id}/>
+        <div className="comments">
+        {post.comments.map((comment) => (
+          <CommentItem key={comment._id} comment={comment} postId={post._id} />
+        ))}
+      </div>
     </Fragment>
 }
 
