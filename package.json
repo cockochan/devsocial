@@ -23,6 +23,7 @@
     "moment": "^2.29.1",
     "mongoose": "^5.10.9",
     "react-moment": "^1.0.0",
+    "react-redux": "^7.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "request": "^2.88.2"
