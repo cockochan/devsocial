@@ -4,7 +4,7 @@ import Spinner from '../../layout/Spinner'
 import {getPost} from '../../actions/post'
 import PropTypes from 'prop-types'
 import PostItem from "../posts/PostItem"
-import CommentItem from "../posts/CommentItem"
+import CommentItem from "../post/CommentItem.js"
 import CommentForm from "../post/CommentForm"
 const Post = ({getPost,post:{post, loading}, match}) => {
     useEffect(()=>{

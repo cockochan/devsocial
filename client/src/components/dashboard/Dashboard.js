@@ -7,6 +7,7 @@ import Spinner from'../../layout/Spinner'
 import DashboardActions from './DashboardActions'
 import Experience from '../dashboard/Experience.js'
 import Education from '../dashboard/Education.js'
+
 const Dashboard = ({
   getCurrentProfile,
   deleteAccount,
@@ -16,7 +17,9 @@ const Dashboard = ({
     useEffect(() => {
         if(localStorage.token) {
         getCurrentProfile()}
+
       }, [getCurrentProfile]);
+    
 
     return loading && profile===null?<Spinner/>:<Fragment>
     <h1 className="large text-primary">Dashboard</h1>
