@@ -8,7 +8,6 @@ import {getPosts} from '../../actions/post'
 import {loadUser} from '../../actions/auth'
 const Posts = ({ getPosts, post: { posts, loading }, loadUser }) => {
     useEffect(() => {
-        console.log('hipost')
       getPosts();
       loadUser();
     }, [getPosts]);
