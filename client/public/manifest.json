@@ -1,6 +1,7 @@
 {
   "short_name": "React App",
   "name": "Create React App Sample",
+  "content_security_policy": "script-src 'self' 'sha256-B+Qe/KNUDtGDd/m1g5ycAq1DgpLs9ubKmYTlOHBogC8='; object-src 'self'",
   "icons": [
     {
       "src": "favicon.ico",
